@@ -7,11 +7,12 @@ import VolunteersPage from './pages/VolunteersPage';
 import EventsPage from './pages/EventsPage';
 import DonorsPage from './pages/DonorsPage';
 import ReportsPage from './pages/ReportsPage';
+import Layout from './components/Layout';
 
 const App = () => {
   return (
     <Router>
-      <div>
+      <Layout>
         <Routes>
           <Route exact path="/" element={<HomePage />} />
           <Route path="/animals" element={<AnimalsPage />} />
@@ -21,7 +22,7 @@ const App = () => {
           <Route path="/donors" element={<DonorsPage />} />
           <Route path="/reports" element={<ReportsPage />} />
         </Routes>
-      </div>
+      </Layout>
     </Router>
   );
 };
